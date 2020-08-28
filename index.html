@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Estilo customizado -->
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <!-- Em detalhes o que aconteceu:
+    1º entrou-se no site do Bootstrap e clicou em Getting Start e na aba Getting Started, fomos até Start Template, copiamos e colamos aqui.
+    2º Depois entramos no site do font awesome (site para colocar icones) , aba Start e copiamos e colamos o código ai acima.
+    3º Depois criei um CSS externo.
+    4º Foi criado a tag <header> para fazer o cabeçalho e dentro dela colocamos a tag <nav> para realizar uma barra de navegação.
+    5º Na tag nav colocamos a classe navbar (que define que haverá uma barra de navegação), nav-expand-sm ( responsividade a dispositivos pequenos), navbar-light cor clarinha, e bg-warning o background laranja.
+    6º Dentro foi criado uma div da qual sera o container desse cabeçalho
+    7º Depois criado um link com a class navbar-brand que formata o logo, e dentro do link o logo em si.
+    ----------------------------------------------------------------------------------------------------
+    8º Para criar o menu, primeiro foi criado a div que é da class collapse navbar-collapse, indicando que esse menu desaparecerá conforme diminuimos a largura da página.
+    9º O id que foi criado do qual eu chamei de nav-principal, é do data-target, que significa que quando sumir o menu, ele virará um ícone que está dentro da tag <button>
+    10º Foi criado uma ul e nela uma class navbar-nav indicando que dentro dela haverá itens de barra de navegação. O ml-auto foi utilizado para colocar da esquerda para direita de maneira automatica.
+    11º Cada li é um nav-item, e cada a um nav-link 
+    12º O último li na verdade é da classe btn para ser criado um botão, que tem espaçamento da esquerda de 4.
+    13º Depois logo abaixo do logo, foi criado a tag <button> que é usada para fazer aparecer o icone quando diminuirmos a tela.
+    14º Utilizamos a class navbar-toggler para aparecer o icone,  o data-toggle =" collapse" indicando que o icone será chamado assim que diminuirmos a tela, e o data-target criado igualzinho ao id da div que contem os itens que irao desaparecer, para o icone aparecer.
+    15º O span está sendo usado para criar o próprio icone.
+    ---------------------------------------------------------------------------------------------------------------------------
+    16º Saindo do cabeçalho e indo direto para a tag <section> , criamos uma div de class container e dentro dela outra div da class row (indicando que usaremos sistemas de grid.
+    17º Definimos col-md-6 para a primeira e col-md 6 para a segunda div, pois a imagem irá sumir apartir do momento que chegar no medium para baixo. 
+     
+     ------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <title>Finans - finanças pessoais</title>
+  </head>
+  <body>
+    
+    <header> <!-- inicio cabeçalho -->
+
+      <!-- LOGO -->
+      <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+        <div class="container">
+          <a href="" class="navbar-brand">
+            <img src="imagens/logo.png" width="142">
+          </a>
+
+      <!-- FIM LOGO -->
+
+      <!-- MENU -->
+
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Benefícios</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Preços</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="btn btn-outline-light ml-4 ">Entrar</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header> 
+
+    <!-- FIM MENU -->
+    <!-- fim cabeçalho -->
+
+    <section id="home"> <!-- inicio seção home -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="align-self-center">
+              <h1 class="display-4">Suas contas, descomplicadas</h1>
+              <p class="lead">Usado por mais de 1 milhão de pessoas, o Finans é uma ferramenta online que vai facilitar sua vida financeira.</p>
+<!-- no formulario foi criado o input group que serve para juntar botoes ao lado da caixa de texto, o lg(large) serve para deixar maior . A classe form control serve para FORMATAR FORMULARIOS. A div com o append (tbm tem o prepend que é o contrario) significa que o icone/botao aparecera depois da caixa de texto.-->
+              <form class="mt-4 mb-4">
+                <div class="input-group input-group-lg">
+                  <input type="text" name="" placeholder="Seu-email " class="form-control">
+                   <div class="input-group-append">
+                      <button type="button" class="btn btn-primary">Cadastre-se</button>
+                    </div>
+                </div>
+              </form>
+
+              <p>Disponível para
+                <a href="" class="btn btn-outline-light">
+                 <i class="fab fa-android fa-lg"></i>
+                </a>
+                 <a href="" class="btn btn-outline-light">
+                 <i class="fab fa-apple fa-lg"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- para tirar a imagem usa o d-none, só que não queremos que ela suma em tela grande, somente quando for menor que o medium, ai coloca d-md-block, para  aimagem sumir quando for menor que a largura do medium. -->
+          <div class="col-md-6 d-none d-md-block">
+            <img src="imagens/capa-mulher.png">
+          </div>
+        </div>
+        
+      </div>
+    </section> <!-- fim seção home -->
+
+    <!-- img-fluid, usado para imagem grandes, aonde utilizando essa classe deixa a imagem responsiva ou seja fluida.
+    Essa class caixa eu criei e esta no estilo.css -->
+
+    <section class="caixa"> <!-- inicio seção saiba -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="align-self-center">
+              <h2>Saiba aonde vai o seu dinheiro</h2>
+              <p>
+                Com o Finans, você categoriza todos os seus lançamentos. Com gráficos simples, você sabe de onde vem e para aonde vai o seu dinheiro.
+              </p>
+              <a href="" class="btn btn-outline-primary">Veja mais</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="imagens/saiba.png " class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section> <!-- fim seção saiba -->
+
+    <section class="caixa"> <!-- inicio seção pare de pagar -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="imagens/juros.png " class="img-fluid">
+          </div>
+          <div class="col-md-6 d-flex">
+            <div class="align-self-center">
+              <h2>Pare de pagar juros e economize</h2>
+              <p>
+                Manter as contas em dia é sempre um problema? O Finans avisa você: receba alertas de contas a pagar e a receber!
+              </p>
+              <a href="" class="btn btn-outline-primary">Veja mais</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section> <!-- fim seção pare de pagar -->
+
+     <section class="caixa"> <!-- inicio seção de facil de usar, economize tempo e suporte amigo -->
+      <div class="container">
+        <div class="row">
+           <div class="col-md-4"> <!-- fácil de usar -->
+             <img src="imagens/facil.png" class="img-fluid">
+             <h4>Fácil de usar</h4>
+             <p>
+               O Finans vai além do básico e permite que você faça controles incríveis, essenciais para suas finanças. Simples como tem que ser!
+             </p>
+           </div> <!-- fim do facil de usar -->
+            <div class="col-md-4"> <!-- economize seu tempo -->
+             <img src="imagens/economize.png" class="img-fluid">
+             <h4>Economize seu tempo</h4>
+             <p>
+               Tempo é dinheiro! Em segundos, você tem tudo sob controle e aproveite seu tempo com o que realmente importa pra você!
+             </p>
+           </div> <!-- fim do economize seu tempo -->
+            <div class="col-md-4"> <!-- suporte amigo -->
+             <img src="imagens/facil.png" class="img-fluid">
+             <h4>Suporte amigo</h4>
+             <p>
+               Dúvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui pra resolver seus problemas e deixar sua vida bem mais fácil!
+             </p>
+           </div> <!-- fim do suporte amigo -->
+        </div>
+      </div>
+    </section> <!-- fim seção de facil de usar, economize tempo e suporte amigo -->
+
+    <!-- Justify-content-end alinha para a direita horizontalmente
+    Já o align-self alinha verticalmente. -->
+    <footer class="mt-4 mb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8" >
+            <p>
+              <a href="">Home</a>
+              <a href="">Recursos</a>
+              <a href="">Benefícios</a>
+              <a href="">Preços</a>
+            </p>
+          </div>
+          <div class="col-md-4 d-flex justify-content-end" >
+            <a href="" class="btn btn-outline-dark text-secondary">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark text-secondary ml-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark text-secondary ml-2">
+              <i class="fab fa-instagram"></i> 
+            </a>
+            <a href="" class="btn btn-outline-dark  text-secondary ml-2">
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
